@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Dashboard Template · Bootstrap</title>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,600" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out <i class="icon ion-md-log-out"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <span data-feather="home"></span>
+                                Dashboard <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file"></span>
+                                Orders
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="shopping-cart"></span>
+                                Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="users"></span>
+                                Customers
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="bar-chart-2"></span>
+                                Reports
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="layers"></span>
+                                Integrations
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Saved reports</span>
+                        <a class="d-flex align-items-center text-muted" href="#">
+                            <span data-feather="plus-circle"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text"></span>
+                                Current month
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text"></span>
+                                Last quarter
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text"></span>
+                                Social engagement
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text"></span>
+                                Year-end sale
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4 content">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Dashboard</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group mr-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                            <span data-feather="calendar"></span>
+                            This week
+                        </button>
+                    </div>
+                </div>
+
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <canvas id="myChart" width="400" height="400"></canvas>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="container">
+                        <h3>Analytics Overview</h3>
+                        <p>Model 3 combines real world range, performance, safety and spaciousness into a premium sedan
+                            that only Tesla can build.</p>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="feature-container">
+                                    <i class="icon ion-md-information-circle info-icon"></i>
+                                    <h4>21,282</h4>
+                                    <p>Total Followers</p>
+                                    <span class="negative-change"><i
+                                            class="icon ion-md-arrow-dropdown"></i>20.90%</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="feature-container">
+                                    <i class="icon ion-md-information-circle info-icon"></i>
+                                    <h4>1.6k</h4>
+                                    <p>Impressions</p>
+                                    <span class="positive-change"><i class="icon ion-md-arrow-dropup"></i>63.27%</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="feature-container">
+                                    <i class="icon ion-md-information-circle info-icon"></i>
+                                    <h4>826</h4>
+                                    <p>Reach</p>
+                                    <span class="negative-change"><i
+                                            class="icon ion-md-arrow-dropdown"></i>85.90%</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="feature-container">
+                                    <i class="icon ion-md-information-circle info-icon"></i>
+                                    <h4>18.2%</h4>
+                                    <p>Engagement Reach</p>
+                                    <span class="positive-change"><i class="icon ion-md-arrow-dropup"></i>112.27%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section>
+                    <!-- Pending Tasks -->
+                    <div class="container">
+                        <h3>Pending Tasks</h3>
+                        <p>Model 3 combines real world range, performance, safety and spaciousness into a premium sedan
+                            that only Tesla can build.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="task-container">
+                                    <span class="status">High</span>
+                                    <h5>Update font sizes</h5>
+                                    <a href=""><i class="icon ion-md-close-circle-outline"></i></a>
+                                </div>
+                                <div class="task-container">
+                                    <span class="status">Medium</span>
+                                    <h5>Update font sizes</h5>
+                                    <a href=""><i class="icon ion-md-close-circle-outline"></i></a>
+                                </div>
+                                <div class="task-container">
+                                    <span class="status">Low</span>
+                                    <h5>Update font sizes</h5>
+                                    <a href=""><i class="icon ion-md-close-circle-outline"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="task-container">
+                                    <span class="status">High</span>
+                                    <h5>Update font sizes</h5>
+                                    <a href=""><i class="icon ion-md-close-circle-outline"></i></a>
+                                </div>
+                                <div class="task-container">
+                                    <span class="status">Medium</span>
+                                    <h5>Update font sizes</h5>
+                                    <a href=""><i class="icon ion-md-close-circle-outline"></i></a>
+                                </div>
+                                <div class="task-container">
+                                    <span class="status">Low</span>
+                                    <h5>Update font sizes</h5>
+                                    <a href=""><i class="icon ion-md-close-circle-outline"></i></a>
+                                </div>
+                            </div><!-- End col-md-6 -->
+                        </div><!-- End Row -->
+                    </div><!-- End container -->
+                </section><!-- End Pending Tasks -->
+
+                <section>
+                    <div class="container">
+                        <h3>Recent Transactions</h3>
+                        <p>Model 3 combines real world range, performance, safety and spaciousness into a premium sedan
+                            that only Tesla can build.</p>
+                        <div class="table-responsive">
+                            <table class="table topmargin-sm">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th><span class="pill">Completed</span></th>
+                                        <td>May 18, 2019</td>
+                                        <td>Otto</td>
+                                        <td><span class="positive-change"><i class="icon ion-md-add"></i>
+                                                5,190.00</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span class="pill">Completed</span></th>
+                                        <td>October 14, 2019</td>
+                                        <td>Thornton</td>
+                                        <td><span class="negative-change"><i class="icon ion-md-remove"></i>
+                                                1,280.00</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span class="pill">Completed</span></th>
+                                        <td>November 24, 2019</td>
+                                        <td></td>
+                                        <td><span class="positive-change"><i class="icon ion-md-add"></i>
+                                                3,250.00</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [8, 7, 3, 5, 2, 3],
+                    backgroundColor: [
+                        '#3f56d1',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        '#3f56d1',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
